@@ -13,7 +13,11 @@
     "nodemon": "^1.17.2"
   },
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "9.4.0"
   },
   "keywords": [],
   "author": "",

@@ -29,15 +29,27 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     //     console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2))
     // })
 
-    db.collection('Users').find().count().then((docs) => {
-        console.log('Users')
-        console.log(JSON.stringify(docs, undefined, 2))
-    }, (err) => {
-        console.log('Unable to fetch todos', err)
-    })
+    // db.collection('Todos').find().toArray().then((docs) => {
+    //     console.log(JSON.stringify(docs, undefined, 2))
+    // }, (err) => {
+    //     console.log('Unable to fetch todos', err)
+    // })
 
+    // db.collection('Users').findOneAndDelete({ age: 31 }).then((result) => {
+    //     console.log(result)
+    // })
 
-
+    // db.collection('Todos').findOneAndUpdate({
+    //     _id: ObjectID('5aaf89b793ae722818b4b3bf')
+    // }, {
+    //     $set: {
+    //         completed: true
+    //     }
+    // }, {
+    //     returnOriginal: false
+    // }).then((result) => {
+    //     console.log(result)
+    // });
 
     // db.close();
 });
